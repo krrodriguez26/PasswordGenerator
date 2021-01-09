@@ -23,7 +23,7 @@ function writePassword() {
 }
 
 // Event listener to generate button
-generateBtn.addEventListener("click", function (writePassword));
+generateBtn.addEventListener("click", writePassword);
 
 //Start function to generate password
  function generatePassword() {
@@ -32,10 +32,10 @@ generateBtn.addEventListener("click", function (writePassword));
      enter = parseInt(prompt(""));
 
    } else {
-     confrimNumber = confirm("Wiil you password contain numbers?");
-     confrimSymbol= confirm("Wiil you password contain symbols?");
-     confrimUpperCase= confirm("Wiil you password contain Uppercase letters?");
-     confirmLowercase= confirm("Wiil you password contain Lowercase letters?");
+     confrimNumber = confirm("Will your password contain numbers?");
+     confrimSymbol= confirm("Will your password contain symbols?");
+     confrimUpperCase= confirm("Will your password contain Uppercase letters?");
+     confirmLowercase= confirm("Will your password contain Lowercase letters?");
    };
  
   }
