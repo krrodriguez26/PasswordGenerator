@@ -5,13 +5,38 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  var length = document.querySelector(".length");
+  var uppercase = document.querySelector(".uppercase");
+  var lowercase = document.querySelector(".lowercase");
+  var symbols = document.querySelector(".symbols");
+  var generate = document.querySelector(".generate");
+  
   passwordText.value = password;
+}
+
+var generatePassword = true;
+
+if (generatePassword{
+  alert('Would you like uppercase characters?');{
+  } else if (lowercase){
+    alert('Would you like lowercase characters?');
+  }
+
+  else ()
+
 
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generate.addEventListener("click", function(writePassword) {
+
+
+
+
+
+
+
+
 
 
 // Generator Funtions
@@ -25,13 +50,9 @@ function getRandomUpper() {
 }
 
 function getRandomNumber() {
-  return String.fromCharCode[Math.floor(Math.random() *10) +48);
+  return String.fromCharCode(Math.floor(Math.random() *10) +48);
 }
 
 function getRandomSymbol() {
-  const symbols = '!@#$%^&*(){}[]=<>/,.';
-  return sysmbols[Math.floor(Math.random() * symbols.length)];
+  return String.fromCharCode(Math.floor(Math.random() *16) +32); 
 }
-
-console.log(getRandomSymbol());
-
