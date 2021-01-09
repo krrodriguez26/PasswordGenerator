@@ -27,32 +27,41 @@ generateBtn.addEventListener("click", writePassword);
 
 //Start function to generate password
  function generatePassword() {
-   enter = parseInt(prompt("How many characters would you like in your password? You may choose between 8 - 128. "));
-   if ( enter < 8 || enter > 128) {
-     enter = parseInt(prompt(""));
-
-   } else {
+   passwordLength = prompt("How many characters would you like in your password?");
+  
+   if(!Passwordlength){
+     alert("You must enter a value");
+   
+    } else if (passwordLength < 8 || passwordLength >128){
+      passwordLength = prompt("You may choose between 8 - 128.")
+      console.log("Password length " + passwordLength);
+    }   
+     else {
      confrimNumber = confirm("Will your password contain numbers?");
      confrimSymbol= confirm("Will your password contain symbols?");
      confrimUpperCase= confirm("Will your password contain Uppercase letters?");
      confirmLowercase= confirm("Will your password contain Lowercase letters?");
    };
  
-  }
 
 
 
 
 
 
-//Loop to choose password chracters
-for (var i=0; i<= complexity; i++){
-  password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
-}
-
-// Add password to textbox
-document.querySelector("yourSecurePassword").value = password;
 
 
 
 
+   
+   // Copy Button
+   var copy = document.querySelector("#copy");
+   copy.addEventListener("click", function () {
+       copyPassword();
+   });
+  
+   function copyPassword() {
+       document.getElementById("password").select();
+       document.execCommand("Copy");
+       alert("Password copied to clipboard!");
+   }
