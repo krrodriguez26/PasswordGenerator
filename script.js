@@ -5,11 +5,13 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var upperCase = document.querySelector("#upperCase");
+  var lowerCase = document.querySelector("#upperCase");
+  var upperCase = document.querySelector("#upperCase");
+  var upperCase = document.querySelector("#upperCase");
   passwordText.value = password;
 }
 
-// Password length/complexity
-let complexity = document.querySelector("generate").value;
 
 //Possible password characters
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
