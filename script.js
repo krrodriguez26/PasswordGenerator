@@ -14,16 +14,16 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 var numbers  = ["1","2","3","4","5","6","7","8","9","0"];
 var symbols = ["!","@","#","$","%","^","&","*","()","_","+","[]","{}","<>","/","."];
 
-
 // Password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+ var passwordText = document.querySelector("#password");
+  
+ passwordText.value = password;
 }
 
+// Event listener to generate button
+generateBtn.addEventListener("click", function (writePassword));
 
 //Start function to generate password
  function generatePassword() {
@@ -44,23 +44,6 @@ function writePassword() {
 
 
 
-
-
-
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  var upperCase = document.querySelector("#upperCase");
-  var lowerCase = document.querySelector("#upperCase");
-  var symbol = document.querySelector("#symbol");
-  var number= document.querySelector("#number");
-  passwordText.value = password;
-}
-
-var generateBtn = document.querySelector("#generate");
 
 //Loop to choose password chracters
 for (var i=0; i<= complexity; i++){
