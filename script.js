@@ -29,7 +29,7 @@ generateBtn.addEventListener("click", writePassword);
 //Start function to generate password
  function generatePassword() {
    passwordLength = prompt("How many characters would you like in your password?");
-  
+ 
    if(!PasswordLength){
      alert("You must enter a value");
    
@@ -67,6 +67,7 @@ generateBtn.addEventListener("click", writePassword);
      else if(confirmNumber && confrimSymbol && confrimUpperCase && confirmLowercase){
       userInput = symbols.concat(numbers,upperCase);
      }
+
      //If 2 choices are true
      else if(confirmNumber && confrimUpperCase){
       userInput = numbers.concat(upperCase);
@@ -86,6 +87,7 @@ generateBtn.addEventListener("click", writePassword);
      else if(confirmSymbol&& confrimNumber){
       userInput = symbols.concat(numbers);
      }
+
      // If 1 choice is true
      else if (confirmNumber) {
       userChoices = numbers;
@@ -99,6 +101,7 @@ generateBtn.addEventListener("click", writePassword);
     else if (confirmLowercase) {
       userChoices = lowerCase;
     }
+    
   // Random selection for loop
   for (var i = 0; i < passwordLength; i++) {
     var allChoices = userInput[Math.floor(Math.random() * userInput.length)];
@@ -115,3 +118,7 @@ generateBtn.addEventListener("click", writePassword);
        document.execCommand("Copy");
        alert("Password copied to clipboard!");
    }
+ }
+
+
+        
