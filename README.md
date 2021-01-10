@@ -6,7 +6,7 @@ Requirements: Create an application that will create a random password generator
 
 Configuration: This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. All the code that was added to create the password generator was done with JavaScript.
 
-Deployed link: 
+Deployed link: https://krrodriguez26.github.io/PasswordGenerator/
 
 Screenshots:
 ![alt text](https://github.com/krrodriguez26/PasswordGenerator/blob/main/assets/generatingpassword.png)
