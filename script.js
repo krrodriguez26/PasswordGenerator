@@ -101,11 +101,14 @@ generateBtn.addEventListener("click", writePassword);
     else if (confirmLowercase) {
       userChoices = lowerCase;
     }
-    
+
   // Random selection for loop
   for (var i = 0; i < passwordLength; i++) {
     var allChoices = userInput[Math.floor(Math.random() * userInput.length)];
   }
+
+  // Variable for empty password length
+  var passwordBlank = [];
 
    // Copy Button
    var copy = document.querySelector("#copy");
