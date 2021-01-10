@@ -10,6 +10,7 @@ var confirmLowercase;
 var userInput;
 
 //Possible password characters
+var passwardLenght 
 var numbers  = ["1","2","3","4","5","6","7","8","9","0"];
 var symbols = ["!","@","#","$","%","^","&","*","()","_","+","[]","{}","<>","/","."];
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -19,6 +20,12 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 function writePassword() {
  var password = generatePassword();
  var passwordText = document.querySelector("#password");
+ var passwordLength = document.querySelector("#passwordlength");
+ var confirmNumber = document.querySelector("#numbers");
+ var confirmSymbol = document.querySelector("#symbols");
+ var confirmUppercase= document.querySelector("#upperCase");
+ var confirmLowerCase = document.querySelector("#lowerCase");
+ var userInput = document.querySelector("#userInput");
   
  passwordText.value = password;
 }
@@ -28,10 +35,10 @@ generateBtn.addEventListener("click", writePassword);
 
 //Start function to generate password
  function generatePassword() {
-   passwordLength = prompt("How many characters would you like in your password?");
+   passwordLength = prompt("How many characters would you like in your password? You may choose between 8 - 128.");
  
    if(!PasswordLength){
-     alert("You must enter a value");
+    alert("You must enter a value");
    
     } else if (passwordLength < 8 || passwordLength >128){
       passwordLength = prompt("You may choose between 8 - 128.")
