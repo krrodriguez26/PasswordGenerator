@@ -10,7 +10,7 @@ var confirmLowercase;
 var userInput;
 
 //Possible password characters
-var passwardLenght 
+var passwordLength 
 var numbers  = ["1","2","3","4","5","6","7","8","9","0"];
 var symbols = ["!","@","#","$","%","^","&","*","()","_","+","[]","{}","<>","/","."];
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -18,7 +18,7 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 
 // Password input
 function writePassword() {
- var password = generatePassword();
+ var password = generatePassword("generate password");
  var passwordText = document.querySelector("#password");
  var passwordLength = document.querySelector("#passwordlength");
  var confirmNumber = document.querySelector("#numbers");
@@ -30,26 +30,35 @@ function writePassword() {
  passwordText.value = password;
 }
 
+// Welcome prompt
+window.onload = alert("Welcome! Please click 'Generate password' to start!");
+
 // Event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 //Start function to generate password
- function generatePassword() {
-   passwordLength = prompt("How many characters would you like in your password? You may choose between 8 - 128.");
- 
-   if(!PasswordLength){
-    alert("You must enter a value");
-   
-    } else if (passwordLength < 8 || passwordLength >128){
-      passwordLength = prompt("You may choose between 8 - 128.")
-      
-    }   
-     else {
-     confrimNumber = confirm("Will your password contain numbers?");
-     confrimSymbol= confirm("Will your password contain symbols?");
-     confrimUpperCase= confirm("Will your password contain Uppercase letters?");
-     confirmLowercase= confirm("Will your password contain Lowercase letters?");
-   };
+var Totlength = prompt("How many characters would you like your password to be?");
+if(Totlength <8 || Totlength > 128){
+    alert("It is recommended to have a password between 8 and 128 characters long! Please start over.");
+}   
+else{
+  if(confirm("Would you like your password to contain upper case letters?")){
+      Array.prototype.push.apply(allCharacters, upperCaseArr);
+  }
+
+  if(confirm("Would you like your password to contain lower case letters?")){
+      Array.prototype.push.apply(allCharacters, lowerCaseArr);
+  }
+
+  if(confirm("Would you like your password to contain numbers?")){
+      Array.prototype.push.apply(allCharacters, numbersArr);
+  }
+  if(confirm("Would you like your password to contain symbols?")){
+      Array.prototype.push.apply(allCharacters, symbolsArr);
+  }
+  if(allChars.length===0){
+      alert("You must select at lease 1 type of characters to generate a password!Please start over.");
+  }
 
    //  4 negative options
      if (!confirmNumber && !confrimSymbol && !confrimUpperCase && !confirmLowercase){
@@ -128,7 +137,5 @@ generateBtn.addEventListener("click", writePassword);
        document.execCommand("Copy");
        alert("Password copied to clipboard!");
    }
- }
-
-
-        
+  }
+ 
