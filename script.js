@@ -71,11 +71,4 @@ function generatePassword(){
           document.getElementById("password").innerHTML = resultPassword;
      }
      }
-
-// Bonus! function to copy password to clipboard
-function copyPassword(){
- document.querySelector("textarea").select();
- document.execCommand("Copy");
- alert("Password copied to clipboard!");
-}
-}
+    }
